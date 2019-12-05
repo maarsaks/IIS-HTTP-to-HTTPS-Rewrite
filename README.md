@@ -1,4 +1,4 @@
-# URL rewrite role - http to https
+# 1. URL rewrite role - http to https
 
 Powershell script which:
 1. Installs IIS URL Rewrite Module 2 (if it is not installed).
