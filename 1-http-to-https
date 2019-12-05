@@ -3,6 +3,7 @@ if (Test-Path "C:\Windows\System32\inetsrv\rewrite.dll" -PathType Any) {
     Write-Host "IIS URL Rewrite Module 2 is installed." -ForegroundColor Green
     Write-Host "Skipping." -ForegroundColor Green
 } 
+
 else { 
     Write-Host "IIS URL Rewrite Module 2 is NOT installed." -ForegroundColor Red
     Write-Host "IIS URL Rewrite Module 2 WILL BE installed." -ForegroundColor Green
