@@ -16,7 +16,7 @@ else {
         Return
     }
 }
-
+# searching all iis sites
 $site = Get-ChildItem -Path IIS:\Sites
 $allsites = Get-ChildItem -Path IIS:\Sites | measure
 $countsites = $allsites.Count
@@ -34,6 +34,7 @@ $x = Read-Host " "
 $sitetorewrite = $site[$x].name
 Write-host "Wybrales" $sitetorewrite
 
+# creating http to https rewrite role in iis
 $sitetorewrite = 'IIS:\Sites\' + $sitetorewrite
 $name = 'http to https redirect role'
 $inbound = '(.*svc)'
