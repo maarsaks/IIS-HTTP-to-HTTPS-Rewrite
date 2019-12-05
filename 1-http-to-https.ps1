@@ -30,10 +30,10 @@ do {
     Get-Variable -name "id" | format-table -HideTableHeaders -autosize
 }
 While ($x -lt $countsites)
-Write-Host "Wybierz witryne, ktora ma miec przekierowanie na HTTPS wpisujac jej ID:" -ForegroundColor Green
+Write-Host "Enter the site ID:" -ForegroundColor Green
 $x = Read-Host " "
 $sitetorewrite = $site[$x].name
-Write-host "Wybrales" $sitetorewrite
+Write-host "You chose the site" $sitetorewrite
 
 # creating http to https rewrite role in iis
 $sitetorewrite = 'IIS:\Sites\' + $sitetorewrite
